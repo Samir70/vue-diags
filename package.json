@@ -1,7 +1,19 @@
 {
   "name": "vue-diags",
-  "private": true,
   "version": "0.0.0",
+  "description": "Vue components to show SVGs of geometric shapes",
+  "files": [
+    "/dist"
+  ],
+  "main": "./dist/vue-diags.umd.js",
+  "module": "./dist/vue-diags.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-diags.es.js",
+      "require": "./dist/vue-diags.umd.js"
+    }
+  },
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
