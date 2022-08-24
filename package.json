@@ -12,9 +12,16 @@
       "import": "./dist/vue-diags.es.js",
       "require": "./dist/vue-diags.umd.js"
     }
+  },  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samir70/vue-diags"
   },
-  "private": true,
-  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Samir70/vue-diags/issues"
+  },
+  "author": "Samir70",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
