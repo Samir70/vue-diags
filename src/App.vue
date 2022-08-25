@@ -1,7 +1,7 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import CircleWithRadius from './components/CircleWithRadius.vue'
+import * as diags from "./main"
 
 const tests = {
   circleWithRadiusTest: { r: 12, penColour: "black", fillColour: "white" }
@@ -9,7 +9,7 @@ const tests = {
 </script>
 
 <template>
-  <CircleWithRadius v-bind:params="tests.circleWithRadiusTest" />
+  <component v-bind:is="diags.circles.withRadius" v-bind:params="tests.circleWithRadiusTest" />
 </template>
 
 <style scoped>

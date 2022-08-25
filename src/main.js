@@ -1,5 +1,9 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import withRadius from "./components/Circles/withRadius.vue"
 
-createApp(App).mount('#app')
+const circles = {
+    withRadius
+}
+
+export {
+    circles
+}
