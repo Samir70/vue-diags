@@ -7,15 +7,17 @@ import * as diags from "./main"
 const radius = ref(5);
 const penCol = ref("black")
 const fillCol = ref("white")
+const angle = ref(-25)
 const tests = {
-  circleWithRadiusTest: () => {
-    return { r: Number(radius.value) || 13, penColour: penCol.value, fillColour: fillCol.value }
+  circleParams: () => {
+    return { r: Number(radius.value) || 13, penColour: penCol.value, fillColour: fillCol.value, angle: angle.value }
   }
 }
 </script>
 
 <template>
-  <component v-bind:is="diags.circles.withRadius" v-bind:params="tests.circleWithRadiusTest()" />
+  <component v-bind:is="diags.circles.withRadius" v-bind:params="tests.circleParams()" />
+  <component v-bind:is="diags.circles.withDiameter" v-bind:params="tests.circleParams()" />
   <div>
     <label for="radius">Radius</label>
     <input type="text" v-model="radius" id="radius" />
@@ -27,6 +29,10 @@ const tests = {
   <div>
     <label for="fillcol">Fill Colour</label>
     <input type="text" v-model="fillCol" id="fillcol" />
+  </div>
+  <div>
+    <label for="angle">Angle</label>
+    <input type="text" v-model="angle" id="angle" />
   </div>
 </template>
 
