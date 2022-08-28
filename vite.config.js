@@ -9,8 +9,8 @@ module.exports = defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/main.js'),
-      name: 'q-show',
-      fileName: (format) => `q-show.${format}.js`
+      name: 'vue-diags',
+      fileName: (format) => `vue-diags.${format}.js`
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
